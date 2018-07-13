@@ -3,6 +3,7 @@
     <types>
         <name>ApexClass</name>
         <members>SObjectDomain</members>
+        <members>SObjectUnitOfWork</members>
     </types>
     <version>43.0</version>
 </Package>
