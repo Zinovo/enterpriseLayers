@@ -104,10 +104,13 @@ public abstract class SObjectSelector {
     public abstract Schema.SObjectType getSObjectType(); 
     
     /**
-     * @description Virtual. Defines the sort order for the query. Default is by ' Name ASC'
+     * @description Virtual. Defines the sort order for the query. Default is by ' Name ASC', or ' Id ASC' if name is not a valid field.
      * @return String describing the SOQL sort order
      **/
     public virtual String getOrderBy() {
+        if (getSObjectType().getDescribe().fields.getMap().get('Name') == null) 
+            return ' Id ASC'; 
+        
         return ' Name ASC'; 
     }
     
