@@ -5,6 +5,7 @@
         <members>SObjectDomain</members>
         <members>SObjectSelector</members>
         <members>SObjectUnitOfWork</members>
+        <members>QueryUtil</members>
     </types>
     <version>43.0</version>
 </Package>

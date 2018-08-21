@@ -52,9 +52,8 @@ public abstract class SObjectSelector {
         // if context user does not have read access to object, throw error
         if (doEnforceOLS && !getSObjectType().getDescribe().isAccessible()) {
             String errString = 'User ' + UserInfo.getUserName() + ' does not have read access to the ' + getSObjectName() + ' object.'; 
-            UtilException ue = UtilException.errPretty(SObjectSelector.class, errString); 
-            ue.debugPretty(); 
-            throw ue; 
+            SelectorException se = new SelectorException(errString); 
+            throw se; 
         }
         
         this.qutil = new QueryUtil(getSObjectType());
@@ -229,9 +228,8 @@ public abstract class SObjectSelector {
             List<SObject> results = Database.query(query); 
             system.debug('--' + results.size() + ' results for ' + getSObjectName() + ' (SObjectSelector) query: ' + query + '--');
             return results; 
-        } catch (exception e) {
-            UtilException ue = UtilException.errPretty(SObjectSelector.class, e.getMessage()); 
-            throw ue; 
+        } catch (exception e) { 
+            throw e; 
         }
     }
     
@@ -268,5 +266,7 @@ public abstract class SObjectSelector {
             this.userId = userId; 
         }
     }
+
+    public class SelectorException extends Exception { }
 
 }
