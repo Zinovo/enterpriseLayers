@@ -1,7 +1,5 @@
 /**
  * @author FinancialForce.com, Inc. with modifications by Kevin Rice
- * @date 2012, modifications 2017.06
- * @group Domain Layer
  * @description Used in modified form in compliance with terms of use. See end of source code for conditions, disclaimers, and notices. Serves as the base class
  * for all extending Domain classes. Note that extending classes must also have an inner class, named "Constructor", that implements the SObjectDomain.IConstructable interface
  * in order for Apex Triggers of that object to delegate to the domain class. 

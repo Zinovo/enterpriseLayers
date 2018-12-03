@@ -1,11 +1,6 @@
 /** 
  * 
- * @author Kevin Rice
- * @date 2017.06.12
- * @group Data Access Layer
- * @description Base abstract class that is utilized by extending classes to select records from SObjects (e.g. LeadSelector, AccountSelector, etc.). Only one public method
- * is exposed herein to query records by id. In order to form tight contracts with the caller, all extending classes will need to expose use-case specific methods to perform
- * more complex queries. 
+ * @author FinancialForce.com, Inc. with modifications by Kevin Rice
  * Note that for query methods returning the generic List<SObject>, if relational objects/fields were included in the query, developers writing calling code will need to either: 
  * (1) Cast the returned results to the specific SObject type, such that the dot notation (e.g. Account.RecordType.Name) can be used to traverse the relational data, or 
  * (2) familiarize themselves with the Apex SObject class, particularly the getSObject(String fieldName), getSObjects(String fieldName), and get(String fieldName) methods, 

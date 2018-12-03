@@ -1,7 +1,5 @@
 /**
  * @author Kevin Rice
- * @date 2017.06.15
- * @group Utilities
  * @description Provides common utilities to classes building dynamic queries, e.g. for method calls such as Database.query(String queryString).
  **/
 

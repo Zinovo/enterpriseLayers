@@ -1,7 +1,5 @@
 /**
  * @author FinancialForce.com, Inc. with modifications by Kevin Rice
- * @date 2012, modifications 2017.06
- * @group Data Access Layer
  * @description Used in modified form in compliance with terms of use. See end of source code for conditions, disclaimers, and notices. 
  **/
 

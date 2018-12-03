@@ -1,7 +1,3 @@
-# th-scaffold
-Base classes to streamline trailhead development
+# Apex Enterprise Classes
 
-<a href="https://githubsfdeploy.herokuapp.com?owner=alpha-bytes&repo=th-scaffold">
-  <img alt="Deploy to Salesforce"
-       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
-</a>
+Expanded and modified version of https://github.com/financialforcedev/df12-apex-enterprise-patterns. Source code copyrights have been retained. 
